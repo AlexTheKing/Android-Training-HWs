@@ -3,8 +3,8 @@
 
 Facebook layouts
 
-![alt preview1](./preview/pr1.png)
-![alt preview2](https://github.com/AlexTheKing/HW-05-10-2016/blob/master/preview/Screenshot_1475847109.png?raw=true)  
-![alt preview3](https://github.com/AlexTheKing/HW-05-10-2016/blob/master/preview/Screenshot_1475847709.png?raw=true)
-![alt preview4](https://github.com/AlexTheKing/HW-05-10-2016/blob/master/preview/Screenshot_1475847771.png?raw=true)
+<img src="./preview/pr1.png" width="600" height="600">
+![alt preview2](./preview/pr2.png)  
+![alt preview3](./preview/pr3.png)
+![alt preview4](./preview/pr4.png)
 
