@@ -7,4 +7,6 @@ Facebook layouts
 <img src="./preview/pr2.png" width="300" height="530">  
 <img src="./preview/pr3.png" width="300" height="530">
 <img src="./preview/pr4.png" width="300" height="530">
+<img src="./preview/pr5.png" width="300" height="530">
+<img src="./preview/pr6.png" width="300" height="530">
 
