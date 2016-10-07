@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="ic_accountant" format="reference"/>
+    <attr name="ic_beenhere" format="reference"/>
+    <attr name="ic_chat_bubble" format="reference"/>
+    <attr name="ic_favorite" format="reference"/>
+    <attr name="ic_group_add" format="reference"/>
+    <attr name="ic_home" format="reference"/>
+    <attr name="ic_more" format="reference"/>
+    <attr name="ic_school" format="reference"/>
+    <attr name="ic_web" format="reference"/>
+    <attr name="ic_group" format="reference"/>
+    <attr name="ic_hamburger" format="reference"/>
+    <attr name="ic_planet" format="reference"/>
+    <attr name="themeBackground" format="reference"/>
+    <attr name="standard_text_color" format="reference"/>
+</resources>

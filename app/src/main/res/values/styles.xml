@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:android="http://schemas.android.com/tools">
 
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
@@ -7,5 +7,38 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
+    <style name="BlueTheme" parent="AppTheme">
+        <item name="ic_accountant">@drawable/ic_blue_accountant</item>
+        <item name="ic_beenhere">@drawable/ic_blue_beenhere</item>
+        <item name="ic_chat_bubble">@drawable/ic_blue_chat_bubble</item>
+        <item name="ic_favorite">@drawable/ic_blue_favorite</item>
+        <item name="ic_group_add">@drawable/ic_blue_group_add</item>
+        <item name="ic_home">@drawable/ic_blue_home</item>
+        <item name="ic_more">@drawable/ic_blue_more</item>
+        <item name="ic_school">@drawable/ic_blue_school</item>
+        <item name="ic_web">@drawable/ic_blue_web</item>
+        <item name="ic_hamburger">@drawable/ic_blue_hamburger</item>
+        <item name="ic_planet">@drawable/ic_blue_planet</item>
+        <item name="ic_group">@drawable/ic_blue_group</item>
+        <item name="themeBackground">@color/colorBlueThemeBG</item>
+        <item name="standard_text_color">@color/colorBlue</item>
+    </style>
+    <style name="YellowTheme" parent="AppTheme">
+        <item name="ic_accountant">@drawable/ic_green_accountant</item>
+        <item name="ic_beenhere">@drawable/ic_green_beenhere</item>
+        <item name="ic_chat_bubble">@drawable/ic_green_chat_bubble</item>
+        <item name="ic_favorite">@drawable/ic_green_favorite</item>
+        <item name="ic_group_add">@drawable/ic_green_group_add</item>
+        <item name="ic_home">@drawable/ic_green_home</item>
+        <item name="ic_more">@drawable/ic_green_more</item>
+        <item name="ic_school">@drawable/ic_green_school</item>
+        <item name="ic_web">@drawable/ic_green_web</item>
+        <item name="ic_hamburger">@drawable/ic_green_hamburger</item>
+        <item name="ic_planet">@drawable/ic_green_planet</item>
+        <item name="ic_group">@drawable/ic_green_group</item>
+        <item name="themeBackground">@color/colorGreenThemeBG</item>
+        <item name="standard_text_color">@color/colorGreen</item>
+    </style>
+
 
 </resources>
