@@ -3,7 +3,7 @@
 
 Facebook layouts
 
-<img src="./preview/pr1.png" width="600" height="600">
+<img src="./preview/pr1.png" width="530" height="300">
 ![alt preview2](./preview/pr2.png)  
 ![alt preview3](./preview/pr3.png)
 ![alt preview4](./preview/pr4.png)
