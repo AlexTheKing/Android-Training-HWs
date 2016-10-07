@@ -4,7 +4,7 @@
 Facebook layouts
 
 <img src="./preview/pr1.png" width="300" height="530">
-![alt preview2](./preview/pr2.png)  
-![alt preview3](./preview/pr3.png)
-![alt preview4](./preview/pr4.png)
+<img src="./preview/pr2.png" width="300" height="530">  
+<img src="./preview/pr3.png" width="300" height="530">
+<img src="./preview/pr4.png" width="300" height="530">
 
