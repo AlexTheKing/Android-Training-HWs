@@ -22,8 +22,14 @@
         <item name="ic_group">@drawable/ic_blue_group</item>
         <item name="themeBackground">@color/colorBlueThemeBG</item>
         <item name="standard_text_color">@color/colorBlue</item>
+        <item name="iconButton_style">@style/IconButton</item>
     </style>
-    <style name="YellowTheme" parent="AppTheme">
+    <style name="IconButton" parent="Widget.AppCompat.Button">
+        <item name="android:background">?attr/selectableItemBackground</item>
+        <item name="android:textColor">?attr/standard_text_color</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="GreenTheme" parent="AppTheme">
         <item name="ic_accountant">@drawable/ic_green_accountant</item>
         <item name="ic_beenhere">@drawable/ic_green_beenhere</item>
         <item name="ic_chat_bubble">@drawable/ic_green_chat_bubble</item>
@@ -38,7 +44,11 @@
         <item name="ic_group">@drawable/ic_green_group</item>
         <item name="themeBackground">@color/colorGreenThemeBG</item>
         <item name="standard_text_color">@color/colorGreen</item>
+        <item name="iconButton_style">@style/IconButton</item>
     </style>
-
-
+    <style name="personDataTextAppearence" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:textColor">@color/colorGrey</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">center_vertical</item>
+    </style>
 </resources>

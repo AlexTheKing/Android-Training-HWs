@@ -14,4 +14,11 @@
     <attr name="ic_planet" format="reference"/>
     <attr name="themeBackground" format="reference"/>
     <attr name="standard_text_color" format="reference"/>
+    <attr name="iconButton_style" format="reference"/>
+    <declare-styleable name="IconButtonStyle">
+        <attr name="topIcon" format="reference"/>
+        <attr name="bottomIcon" format="reference"/>
+        <attr name="leftIcon" format="reference"/>
+        <attr name="rightIcon" format="reference"/>
+    </declare-styleable>
 </resources>

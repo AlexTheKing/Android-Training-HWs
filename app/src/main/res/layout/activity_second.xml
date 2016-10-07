@@ -3,6 +3,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.example.alex.facebooklayout.MainActivity">
@@ -16,8 +17,8 @@
             android:layout_height="wrap_content"
             android:padding="16dp"
             android:background="?attr/selectableItemBackground"
-            android:src="@drawable/ic_white_search"/>
-        <TextView
+            app:srcCompat="@drawable/ic_white_search"/>
+        <EditText
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:gravity="center_vertical"
@@ -26,23 +27,22 @@
             android:textColor="#AAFFFFFF"
             android:textSize="@dimen/big_size_text"
             android:layout_weight="1"/>
-        <View
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_weight="1"/>
         <ImageButton
             android:layout_width="28dp"
             android:layout_height="28dp"
+            android:padding="16dp"
             android:layout_gravity="center_vertical"
             android:layout_marginRight="12dp"
-            android:src="@drawable/ic_white_chat_bubble"
+            app:srcCompat="@drawable/ic_white_chat_bubble"
             android:background="?attr/selectableItemBackground" />
-        <ImageView
+        <ImageButton
             android:layout_width="28dp"
             android:layout_height="28dp"
+            android:padding="16dp"
             android:layout_gravity="center_vertical"
+            android:background="?attr/selectableItemBackground"
             android:layout_marginRight="10dp"
-            android:src="@drawable/ic_white_person"/>
+            app:srcCompat="@drawable/ic_white_person"/>
     </LinearLayout>
 
     <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
@@ -65,28 +65,32 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="#FFFFFF">
-                    <ImageView
+                    <ImageButton
                         android:layout_width="38dp"
                         android:layout_height="38dp"
-                        android:src="?attr/ic_web"
+                        android:background="?attr/selectableItemBackground"
+                        app:srcCompat="?attr/ic_web"
                         android:layout_weight="0.25"
                         android:layout_gravity="center_vertical"/>
-                    <ImageView
+                    <ImageButton
                         android:layout_width="38dp"
                         android:layout_height="38dp"
-                        android:src="?attr/ic_group"
+                        android:background="?attr/selectableItemBackground"
+                        app:srcCompat="?attr/ic_group"
                         android:layout_weight="0.25"
                         android:layout_gravity="center_vertical"/>
-                    <ImageView
+                    <ImageButton
                         android:layout_width="38dp"
                         android:layout_height="38dp"
-                        android:src="?attr/ic_planet"
+                        android:background="?attr/selectableItemBackground"
+                        app:srcCompat="?attr/ic_planet"
                         android:layout_weight="0.25"
                         android:layout_gravity="center_vertical"/>
-                    <ImageView
+                    <ImageButton
                         android:layout_width="38dp"
                         android:layout_height="38dp"
-                        android:src="?attr/ic_hamburger"
+                        android:background="?attr/selectableItemBackground"
+                        app:srcCompat="?attr/ic_hamburger"
                         android:layout_weight="0.25"
                         android:layout_gravity="center_vertical"/>
                 </LinearLayout>
@@ -156,7 +160,7 @@
                                     android:layout_height="16dp"
                                     android:layout_gravity="center_vertical"
                                     android:layout_marginLeft="8dp"
-                                    android:src="@drawable/ic_white_planet"/>
+                                    app:srcCompat="@drawable/ic_white_planet"/>
                             </LinearLayout>
                         </LinearLayout>
                         <View
@@ -166,7 +170,7 @@
                         <ImageView
                             android:layout_width="32dp"
                             android:layout_height="32dp"
-                            android:src="@drawable/ic_white_arrow_drop_down"/>
+                            app:srcCompat="@drawable/ic_white_arrow_drop_down"/>
                     </LinearLayout>
                     <TextView
                         android:layout_width="match_parent"

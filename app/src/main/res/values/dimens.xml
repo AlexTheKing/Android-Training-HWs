@@ -7,4 +7,5 @@
     <dimen name="standard_text">16sp</dimen>
     <dimen name="middle_size_text">18sp</dimen>
     <dimen name="big_size_text">22sp</dimen>
+    <dimen name="textTitleSize">18sp</dimen>
 </resources>

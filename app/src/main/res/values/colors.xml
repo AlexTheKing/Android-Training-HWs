@@ -7,4 +7,5 @@
     <color name="colorBlueThemeBG">#3B5998</color>
     <color name="colorBlue">#4080FF</color>
     <color name="colorGreen">#33691e</color>
+    <color name="colorGrey">#444444</color>
 </resources>
