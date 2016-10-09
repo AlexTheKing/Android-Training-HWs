@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">FaceBookLayout</string>
+    <string name="clicked">Clicked!</string>
 </resources>
