@@ -12,6 +12,48 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         vectorDrawables.useSupportLibrary true
     }
+
+
+    def AdsPaid = false
+    def AdsFree = true
+
+    applicationVariants.all { variant ->
+        variant.outputs.each { output ->
+            def file = output.outputFile
+            def fileName = getParent().getName()
+            def flavor = variant.getFlavorName()
+            def build = variant.getBuildType().getName()
+            fileName = fileName + "_" + build + "_" + flavor + "_" + versionName + ".apk"
+            output.outputFile = new File(file.parent, fileName)
+            println "Generated apk with name: " + fileName
+        }
+    }
+
+    flavorDimensions "env", "country"
+
+    productFlavors {
+        Paid {
+            dimension "env"
+            applicationId "com.example.alex.facebooklayout.paid"
+            buildConfigField "boolean", "ADS", "$AdsPaid"
+        }
+
+        Free {
+            dimension "env"
+            applicationId "com.example.alex.facebooklayout.free"
+            buildConfigField "boolean", "ADS", "$AdsFree"
+        }
+
+        France {
+            dimension "country"
+        }
+
+        China {
+            dimension "country"
+        }
+    }
+
+
     buildTypes {
         release {
             minifyEnabled false

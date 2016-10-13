@@ -16,6 +16,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
+        if(BuildConfig.DEBUG) {
+            Toast.makeText(getApplicationContext(), "DEBUG Version", Toast.LENGTH_SHORT);
+        } else {
+            Toast.makeText(getApplicationContext(), "Release Version for " + BuildConfig.FLAVOR, Toast.LENGTH_SHORT);
+        }
     }
 
     public void toNews(View view) {
