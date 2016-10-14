@@ -17,9 +17,9 @@ public class MainActivity extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
         if(BuildConfig.DEBUG) {
-            Toast.makeText(getApplicationContext(), "DEBUG Version", Toast.LENGTH_SHORT);
+            Toast.makeText(getApplicationContext(), "DEBUG Version", Toast.LENGTH_SHORT).show();
         } else {
-            Toast.makeText(getApplicationContext(), "Release Version for " + BuildConfig.FLAVOR, Toast.LENGTH_SHORT);
+            Toast.makeText(getApplicationContext(), "Release Version for " + BuildConfig.FLAVOR, Toast.LENGTH_SHORT).show();
         }
     }
 
