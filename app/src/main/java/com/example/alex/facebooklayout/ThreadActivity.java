@@ -1,5 +1,6 @@
-package com.example.alex.myapplication;
+package com.example.alex.facebooklayout;
 
+import android.app.Activity;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -8,13 +9,15 @@ import android.util.Log;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.alex.myapplication.threads.IProgressCallback;
-import com.example.alex.myapplication.threads.IResultCallback;
-import com.example.alex.myapplication.threads.ITask;
-import com.example.alex.myapplication.threads.MyAsyncTask;
+import com.example.alex.facebooklayout.threads.IProgressCallback;
+import com.example.alex.facebooklayout.threads.IResultCallback;
+import com.example.alex.facebooklayout.threads.ITask;
+import com.example.alex.facebooklayout.threads.MyAsyncTask;
 
 public class ThreadActivity extends AppCompatActivity {
+
     private static final String TAG = "MYTAG";
+    MyAsyncTask myTask;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -23,40 +26,53 @@ public class ThreadActivity extends AppCompatActivity {
 
         final TextView view = (TextView) findViewById(R.id.threadResult);
 
-        MyAsyncTask myTask = new MyAsyncTask();
+        myTask = (MyAsyncTask) getLastNonConfigurationInstance();
 
-        myTask.execute(new ITask<String, Integer, String>() {
+        if(myTask == null) {
+            myTask = new MyAsyncTask();
+            myTask.link(this);
+            myTask.execute(new ITask<String, Integer, String>() {
 
-            @Override
-            public String doInBackground(String s, IProgressCallback<Integer> progressCallback) {
-                int count = 0;
-                for(char c : s.toCharArray()){
-                    Log.d(TAG, "doInBackground: " + c);
-                    progressCallback.onProgressUpdate(count);
-                    count++;
-                    try {
-                        Thread.currentThread().sleep(3000);
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
+                @Override
+                public String doInBackground(String s, IProgressCallback<Integer> progressCallback) {
+                    int count = 0;
+                    for(char c : s.toCharArray()){
+                        Log.d(TAG, "doInBackground: " + c);
+                        progressCallback.onProgressUpdate(count);
+                        count++;
+                        try {
+                            Thread.currentThread().sleep(3000);
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
                     }
+                    return "Work is done!";
                 }
-                return "Work is done!";
-            }
-        }, "Hello", new IProgressCallback<Integer>() {
-            @Override
-            public void onProgressUpdate(Integer integer) {
-                Toast.makeText(ThreadActivity.this, "Downloading " + integer + " file", Toast.LENGTH_SHORT).show();
-            }
-        }, new IResultCallback<String>() {
-            @Override
-            public void onSuccess(String s) {
-                view.setText(s);
-            }
+            }, "Hello", new IProgressCallback<Integer>() {
+                @Override
+                public void onProgressUpdate(Integer integer, Activity activity) {
+                    Toast.makeText(activity, "Downloading " + integer + " file", Toast.LENGTH_SHORT).show();
+                }
+            }, new IResultCallback<String>() {
+                @Override
+                public void onSuccess(String s) {
+                    view.setText(s);
+                }
 
-            @Override
-            public void onError(Exception exception) {
-                view.setText("Error");
-            }
-        });
+                @Override
+                public void onError(Exception exception) {
+                    view.setText("Error");
+                }
+            });
+        } else {
+            myTask.link(this);
+        }
     }
+
+    @Override
+    public Object onRetainCustomNonConfigurationInstance() {
+        myTask.unlink();
+        return myTask;
+    }
+
 }

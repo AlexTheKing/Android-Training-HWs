@@ -1,7 +1,12 @@
-package com.example.alex.myapplication.threads;
+package com.example.alex.facebooklayout.threads;
 
-public interface IProgressCallback<Progress> {
+import android.app.Activity;
 
-    void onProgressUpdate(Progress progress);
+public abstract class IProgressCallback<Progress> {
+
+    public abstract void onProgressUpdate(Progress progress, Activity activity);
+    public void onProgressUpdate(Progress progress) {
+        onProgressUpdate(progress, null);
+    }
 
 }

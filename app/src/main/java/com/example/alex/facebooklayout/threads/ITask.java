@@ -1,4 +1,4 @@
-package com.example.alex.myapplication.threads;
+package com.example.alex.facebooklayout.threads;
 
 public abstract class ITask<Params, Progress, Result> {
 
