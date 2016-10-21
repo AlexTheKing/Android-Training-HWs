@@ -15,6 +15,28 @@
         android:layout_height="wrap_content"
         android:textSize="24sp"
         android:gravity="center"
-        android:id="@+id/jsonview"/>
+        android:id="@+id/jsonview" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="previous"
+            android:onClick="scrollLeft"
+            android:layout_weight="0.33"/>
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="0.33"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="next"
+            android:onClick="scrollRight"
+            android:layout_weight="0.33"/>
+    </LinearLayout>
 
 </LinearLayout>
